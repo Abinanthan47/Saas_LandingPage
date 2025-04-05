@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import React, { forwardRef, useRef } from 'react';
+import { useRef } from "react";
 
-import { AnimatedBeam, Circle } from '@/components/ui/animated-beam';
-import { Icons } from '@/components/ui/animated-beam';
+import { AnimatedBeam, Circle } from "@/components/ui/animated-beam";
+import { Icons } from "@/components/ui/icons";
+
 export default function AnimatedBeamBg() {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
@@ -17,34 +17,34 @@ export default function AnimatedBeamBg() {
 
   return (
     <div
-      className='relative flex w-full max-w-[500px] mx-auto items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl'
+      className="relative flex w-full max-w-[500px] mx-auto items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
       ref={containerRef}
     >
-      <div className='flex h-full w-full flex-col items-stretch justify-between gap-10'>
-        <div className='flex flex-row items-center justify-between'>
+      <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
+        <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
             <Icons.typescript />
           </Circle>
-          <Circle ref={div5Ref} className='p-2'>
+          <Circle ref={div5Ref} className="p-2">
             <Icons.tailwindcss />
           </Circle>
         </div>
-        <div className='flex flex-row items-center justify-between'>
-          <Circle ref={div2Ref} className='p-2'>
+        <div className="flex flex-row items-center justify-between">
+          <Circle ref={div2Ref} className="p-2">
             <Icons.framer />
           </Circle>
-          <Circle ref={div4Ref} className='h-16 w-16 p-3'>
+          <Circle ref={div4Ref} className="h-16 w-16 p-3">
             <Icons.logo />
           </Circle>
-          <Circle ref={div6Ref} className='p-2'>
+          <Circle ref={div6Ref} className="p-2">
             <Icons.gsap />
           </Circle>
         </div>
-        <div className='flex flex-row items-center justify-between'>
-          <Circle ref={div3Ref} className='p-2'>
+        <div className="flex flex-row items-center justify-between">
+          <Circle ref={div3Ref} className="p-2">
             <Icons.nextjs />
           </Circle>
-          <Circle ref={div7Ref} className='p-2'>
+          <Circle ref={div7Ref} className="p-2">
             <Icons.reactjs />
           </Circle>
         </div>
@@ -57,16 +57,16 @@ export default function AnimatedBeamBg() {
         curvature={-75}
         endYOffset={-10}
         dotted
-        gradientStartColor='#00ac47'
-        gradientStopColor='#ffba00'
+        gradientStartColor="#00ac47"
+        gradientStopColor="#ffba00"
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div4Ref}
         dotted
-        gradientStartColor='#d948ae'
-        gradientStopColor='#5b60ff'
+        gradientStartColor="#d948ae"
+        gradientStopColor="#5b60ff"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -83,8 +83,8 @@ export default function AnimatedBeamBg() {
         curvature={-75}
         endYOffset={-10}
         reverse
-        gradientStartColor='#48b0d9'
-        gradientStopColor='#67aeff'
+        gradientStartColor="#48b0d9"
+        gradientStopColor="#67aeff"
         dotted
       />
       <AnimatedBeam
@@ -93,8 +93,8 @@ export default function AnimatedBeamBg() {
         toRef={div4Ref}
         reverse
         dotted
-        gradientStartColor='#00ac47'
-        gradientStopColor='#4fcc5d'
+        gradientStartColor="#00ac47"
+        gradientStopColor="#4fcc5d"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -104,8 +104,8 @@ export default function AnimatedBeamBg() {
         endYOffset={10}
         reverse
         dotted
-        gradientStartColor='#48b0d9'
-        gradientStopColor='#67aeff'
+        gradientStartColor="#48b0d9"
+        gradientStopColor="#67aeff"
       />
     </div>
   );

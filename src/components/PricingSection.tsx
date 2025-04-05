@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { CircleCheck, Gem } from "lucide-react";
 import Link from "next/link";
+import { JSX } from "react";
 
 interface PricingCardProps {
   name: string;

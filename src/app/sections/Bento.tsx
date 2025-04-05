@@ -3,6 +3,7 @@ import { AnimatedListDemo } from "@/components/AnimatesList";
 import { CardDemo } from "@/components/cards-demo-1";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
+import { AlertCircle, BarChart, Brain, Link } from "lucide-react";
 import Image from "next/image";
 const files = [
   {
@@ -36,6 +37,7 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
     background: <CardDemo />,
+    Icon: Brain,
   },
   {
     name: "Real-time SEO Alerts",
@@ -45,6 +47,7 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: <AnimatedListDemo />,
+    Icon: AlertCircle,
   },
   {
     name: "Multi-platform Integration",
@@ -64,6 +67,7 @@ const features = [
         />
       </div>
     ),
+    Icon: Link,
   },
   {
     name: "SEO Progress Tracking",
@@ -78,6 +82,7 @@ const features = [
         className="absolute  -z-10"
       />
     ),
+    Icon: BarChart,
   },
 ];
 

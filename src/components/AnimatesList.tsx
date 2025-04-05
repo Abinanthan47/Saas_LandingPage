@@ -8,37 +8,41 @@ import { PiGraphThin } from "react-icons/pi";
 interface Item {
   name: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   color: string;
   time: string;
 }
 
 let notifications = [
-    {
-      name: "SEO Alert",
-      description: "AI detected a ranking change",
-      time: "15m ago",
-      icon: <FaBell  className="text-2xl text-purple-400" />,
-    },
-    {
-      name: "New User Signup",
-      description: "A new user joined your platform",
-      time: "10m ago",
-      icon: <FaUserPlus className="text-2xl text-purple-400" />,
-    },
-    {
-      name: "New Message",
-      description: "You received a support inquiry",
-      time: "5m ago",
-      icon: <FaCommentDots className="text-2xl text-purple-400" />,
-    },
-    {
-      name: "Traffic Surge",
-      description: "AI detected a spike in visitors",
-      time: "2m ago",
-      icon: <PiGraphThin className="text-2xl text-purple-400" />,
-    },
-  ];
+  {
+    name: "SEO Alert",
+    description: "AI detected a ranking change",
+    time: "15m ago",
+    icon: <FaBell className="text-2xl text-purple-400" />,
+    color: "#8433D6",
+  },
+  {
+    name: "New User Signup",
+    description: "A new user joined your platform",
+    time: "10m ago",
+    icon: <FaUserPlus className="text-2xl text-purple-400" />,
+    color: "#8433D6",
+  },
+  {
+    name: "New Message",
+    description: "You received a support inquiry",
+    time: "5m ago",
+    icon: <FaCommentDots className="text-2xl text-purple-400" />,
+    color: "#8433D6",
+  },
+  {
+    name: "Traffic Surge",
+    description: "AI detected a spike in visitors",
+    time: "2m ago",
+    icon: <PiGraphThin className="text-2xl text-purple-400" />,
+    color: "#8433D6",
+  },
+];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
