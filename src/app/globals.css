@@ -1,21 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background-color: #000018;
+  color: #fff;
+  font-family: "Syne", serif;
 }
 
-@media (prefers-color-scheme: dark) {
+.sdw {
+  box-shadow: -20px -20px 50px rgb(255, 255, 255, 0.5),
+    -20px -20px 80px rgb(255, 255, 255, 0.1), 0 0 50px rgb(140, 69, 255);
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
+  }
+  .dark {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide default scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(192, 153, 255, 0.8),
+    rgba(80, 40, 170, 0.8)
+  );
+  border-radius: 3px;
+  /* Add transition for smooth hover effect */
+  transition: background 0.3s ease-in-out;
+  /* Add box shadow for tail effect */
+  box-shadow: 0 0 15px rgba(192, 153, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(155, 79, 255),
+    rgba(100, 50, 190, 1)
+  );
+  /* Enhanced glow effect on hover */
+  box-shadow: 0 0 20px rgba(192, 153, 255, 0.5);
 }
