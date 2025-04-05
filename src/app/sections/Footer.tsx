@@ -110,8 +110,8 @@ const Footer = () => {
       <div className="absolute top-0 left-32  right-32 h-[1.5px] bg-gradient-to-r from-transparent via-[#6C2ECC] to-transparent"></div>
       <div className="max-w-7xl mx-auto mt-8">
         <Sparkles
-          density={400}
-          size={1.4}
+          density={100}
+          size={1}
           direction="bottom"
           className="absolute inset-x-0 top-0 h-full w-full  [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
         />
